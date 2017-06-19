@@ -1,0 +1,348 @@
+html {
+    font-size: 100px;
+}
+
+html, body, .swiper-container, .swiper-slide {
+    /*单屏页面效果*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*音乐*/
+.music {
+    position: absolute;
+    z-index: 99;
+    top: .3rem;
+    right: .3rem;
+    width: .57rem;
+    height: .57rem;
+    background: url("../images/music.png") no-repeat;
+    -webkit-background-size: .57rem .57rem;
+    background-size: .57rem .57rem;
+    opacity: 1;
+}
+
+.musicMove {
+    -webkit-animation:musicMove 1s steps(15) infinite forwards;
+    animation:musicMove 1s steps(15) infinite forwards;
+}
+
+.musicMove{
+    -webkit-animation: rotate linear 3s infinite;
+    animation: rotate linear 3s infinite ;
+}
+@-webkit-keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*箭头*/
+.pointer{
+    position: absolute;
+    bottom:.4rem;
+    left:50%;
+    margin-left:-.3rem;
+    width:.6rem;
+    height:.36rem;
+    z-index:5;
+    background: url("../images/moveupicon.png")no-repeat;
+    background-size: cover;
+    -webkit-animation: pointerMove 1s infinite both;
+    animation: pointerMove 1s infinite both;
+}
+@-webkit-keyframes pointerMove {
+    0%{
+        transform: translateY(-.2rem);
+    }
+    70%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-.2rem);
+    }
+}
+@keyframes pointerMove {
+    0%{
+        transform: translateY(-.2rem);
+    }
+    70%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-.2rem);
+    }
+}
+
+/*第一屏*/
+.page01 {
+    background: rgba(248, 209, 78, 1);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    position: absolute;
+    opacity: 0;
+}
+.swiper-slide p{
+    opacity: 0;
+}
+
+#page01 img:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 4.18rem;
+    height: 6.57rem;
+    z-index: 2;
+    animation:fadeInLeft linear 1s .3s both;
+    -webkit-animation:fadeInLeft linear 1s .3s both;
+}
+
+#page01 img:nth-child(2) {
+    right: 0;
+    bottom: 1rem;
+    width: 3.22rem;
+    height: 5.03rem;
+    z-index: 2;
+    animation:fadeInRight linear 1s .3s both;
+    -webkit-animation:fadeInRight linear 1s .5s both;
+}
+
+#page01 img:nth-child(3) {
+    bottom: 0;
+    width: 6.4rem;
+    height: 4.88rem;
+    z-index: 1;
+    animation:fadeInDown linear 1s .3s both;
+    -webkit-animation:fadeInDown linear 1s .5s both;
+}
+
+#page01 img:nth-child(4) {
+    width: 5.3rem;
+    height: 6.4rem;
+    left: 0.5rem;
+    animation:bounceOut linear 1s .3s both;
+    -webkit-animation:bounceIn linear 1s .3s both;
+}
+
+#page01 img:nth-child(5) {
+    width: 6.4rem;
+    height: 5.8rem;
+    animation:flash linear 1s .3s both;
+    -webkit-animation:flash linear 1s .5s infinite both;
+}
+
+#page01 img:nth-child(6) {
+    width: 2.69rem;
+    height: 0.99rem;
+    left: 2.1rem;
+    bottom: 0.7rem;
+    z-index: 2;
+    animation:flipInX 2s .3s infinite both;
+    -webkit-animation:flipInX 2s .3s infinite both;
+}
+
+#page01 img:nth-child(7) {
+    width: 1.87rem;
+    height: .86rem;
+    left: 2.3rem;
+    top: 1.5rem;
+    animation:fadeInLeft linear 1s .3s both;
+    -webkit-animation:fadeInLeft linear 1s .3s both;
+}
+
+#page01 img:nth-child(8) {
+    width: 2.6rem;
+    height: .86rem;
+    left: 2.02rem;
+    top: 2.55rem;
+    animation:fadeInRight linear 1s .3s both;
+    -webkit-animation:fadeInRight linear 1s .3s both;
+}
+
+/*#page01 img:nth-child(10){*/
+/*width: .57rem;*/
+/*height: .57rem;*/
+/*top:0.15rem;*/
+/*right:0.15rem;*/
+/*}*/
+/*第二屏*/
+#page02 {
+    background: rgba(248, 209, 78, 1);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#page02 p {
+    font-family: '黑体';
+    font-size: .6rem;
+    font-weight: bold;
+    position: absolute;
+    top: 4.6rem;
+    left: 2.1rem;
+    z-index: 1;
+    animation:fadeInRight linear 1s .3s both;
+    -webkit-animation:fadeInRight linear 1s .3s both;
+
+}
+
+#page02 .myjianjie .kuang {
+    position: absolute;
+    bottom: 0.6rem;
+    width: 5.5rem;
+    height: 7rem;
+    left: .6rem;
+    top: auto;
+    opacity: 0;
+    animation:fadeInDown linear 1s .3s both;
+    -webkit-animation:fadeInDown linear 1s .3s both;
+}
+
+#page02 .myjianjie .line {
+    position: absolute;
+    height: .1rem;
+    width: 3.5rem;
+    top: 5.5rem;
+    animation:fadeInUp linear 1s .3s both;
+    -webkit-animation:fadeInUp linear 1s .3s both;
+}
+
+#page02 img:nth-child(1) {
+    width: 2.2rem;
+    height: 3.5rem;
+    top: 0;
+    left: 0rem;
+    animation:fadeInLeft linear 1s .3s both;
+    -webkit-animation:fadeInLeft linear 1s .3s both;
+}
+
+#page02 img:nth-child(2) {
+    width: 2.2rem;
+    height: 3.5rem;
+    top: 0;
+    right: 0rem;
+    animation:fadeInRight linear 1s .3s both;
+    -webkit-animation:fadeInRight linear 1s .3s both;
+}
+
+#page02 img:nth-child(3) {
+    width: 3.5rem;
+    height: 3.5rem;
+    left: 1.7rem;
+    top: .2rem;
+    animation:fadeInDown linear 1s .3s both;
+    -webkit-animation:fadeInDown linear 1s .3s both;
+}
+
+#page02 img:nth-child(4) {
+    bottom: 0;
+    width: 6.4rem;
+    height: 8.4rem;
+    transform: rotate(180deg);
+    animation:flash linear 1s .3s both;
+    -webkit-animation:flash linear 1s .5s infinite both;
+}
+
+/*第三页*/
+#page03 {
+    background: rgba(248, 209, 78, 1);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#page03 img:nth-of-type(1) {
+    position: absolute;
+    left:0.1rem;
+    animation:fadeInDown linear 1s .3s both;
+    -webkit-animation:fadeInDown linear 1s .3s both;
+}
+#page03 img:nth-of-type(2){
+    position: absolute;
+    right: 0;
+    top:0;
+    animation:flash linear 1s .3s both;
+    -webkit-animation:flash linear 1s .5s infinite both;
+}
+#page03 img:nth-of-type(3){
+    transform:rotate(180deg);
+    left: 0;
+    top:0;
+    animation:flash linear 1s .3s both;
+    -webkit-animation:flash linear 1s .8s infinite both;
+}
+#page03 img:nth-of-type(4){
+    width: 6.4rem;
+    animation:flash linear 1s .3s both;
+    -webkit-animation:flash linear 1s .8s infinite both;
+}
+
+/*第四屏*/
+#page04 {
+    background: rgba(248, 209, 78, 1);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#page04 .contactme{
+    position: relative;
+}
+#page04 .contactme img:nth-of-type(1){
+    width: 6.4rem;
+    animation:fadeInDown linear 1s .3s both;
+    -webkit-animation:fadeInDown linear 1s .3s both;
+}
+#page04 .contactme p:nth-of-type(1){
+    position: absolute;
+    font-size: .28rem;
+    left: .75rem;
+    top:2.5rem;
+    animation:fadeInLeft linear 1s .3s both;
+    -webkit-animation:fadeInLeft linear 1s .3s both;
+}
+#page04 .contactme p:nth-of-type(2){
+    position: absolute;
+    font-size: .28rem;
+    left: .75rem;
+    top:3.5rem;
+    animation:fadeInRight linear 1s .3s both;
+    -webkit-animation:fadeInRight linear 1s .3s both;
+}
+#page04 .contactme p:nth-of-type(3){
+    position: absolute;
+    font-size: .28rem;
+    left: .75rem;
+    top:4.5rem;
+    animation:fadeInLeft linear 1s .3s both;
+    -webkit-animation:fadeInLeft linear 1s .3s both;
+}
+#page04 .contactme p:nth-of-type(4){
+    position: absolute;
+    font-size: .26rem;
+    left: .75rem;
+    top:5.5rem;
+    animation:fadeInRight linear 1s .3s both;
+    -webkit-animation:fadeInRight linear 1s .3s both;
+}
+#page04 .contactme img:nth-of-type(2){
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top:6.6rem;
+   left:2rem;
+    animation:lightSpeedIn linear 2s .3s both;
+    -webkit-animation:lightSpeedIn linear 2s .3s both;
+}
