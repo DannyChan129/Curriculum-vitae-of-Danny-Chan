@@ -66,3 +66,5 @@ musicBox.addEventListener('click',function(){
         musicBox.style.opacity=1;
     }
 },false);
+
+console.log('解决bug')
